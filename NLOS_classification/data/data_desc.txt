@@ -1,0 +1,13 @@
+All data is recorded in a range from 0 to 20 meters
+
+LOS Session description:
+All session have a clear LOS in a almost static environment.
+session01 - session39: Plain suburban house with plenty of recordings in thin hallways, rooms with plenty of furniture and large electronics, carpet floors and wooden floors
+session40 - session87: Public library ground floor and basement with plenty of furniture, shelves of different amounts of books (atleast halfway full with equal dispersion), long hallways with some furniture, near elevators, in conference rooms, and open areas with minimal furniture
+session88 - session105: University lab with plenty of electronics, empty hallways, large conference rooms with plenty of furniture
+
+NLOS:
+Very obvious NLOS in a almost static environment.
+session01 - session35: University with perpendicular and angled walls, significant amount of furniture and electronics blocking the path, around corners/double corners, through doors/glass walls
+session36 - session80: Libarary ground floor and basement, with between shelves, various glass walls, furniture, pillars, elevator doors
+session80 - session104: Plain suburban home with plenty of recordings with walls, doors, furniture, countertop between antennas 

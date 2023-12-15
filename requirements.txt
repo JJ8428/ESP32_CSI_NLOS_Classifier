@@ -1,0 +1,8 @@
+csv
+matplotlib
+numpy
+scipy
+serial
+joblib
+scikit-learn
+tensorflow

@@ -1,0 +1,26 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "C:/Users/JJ/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "C:/Users/JJ/Desktop/IoT_project/board_program/ftm_ESP/FTM_responder/build/bootloader",
+    "config_file":        "C:/Users/JJ/Desktop/IoT_project/board_program/ftm_ESP/FTM_responder/sdkconfig",
+    "config_defaults":    "",
+    "bootloader_elf":     "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "build_type":         "flash_app",
+    "git_revision":       "v5.1-dirty",
+    "target":             "esp32s3",
+    "rev":                "",
+    "min_rev":            "0",
+    "max_rev":            "99",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32s3-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "C:/Users/JJ/esp/esp-idf/components/efuse/Kconfig;C:/Users/JJ/esp/esp-idf/components/esp_common/Kconfig;C:/Users/JJ/esp/esp-idf/components/esp_hw_support/Kconfig;C:/Users/JJ/esp/esp-idf/components/esp_system/Kconfig;C:/Users/JJ/esp/esp-idf/components/freertos/Kconfig;C:/Users/JJ/esp/esp-idf/components/hal/Kconfig;C:/Users/JJ/esp/esp-idf/components/log/Kconfig;C:/Users/JJ/esp/esp-idf/components/newlib/Kconfig;C:/Users/JJ/esp/esp-idf/components/soc/Kconfig;C:/Users/JJ/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/JJ/esp/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/JJ/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;C:/Users/JJ/esp/esp-idf/components/esp_rom/Kconfig.projbuild;C:/Users/JJ/esp/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/JJ/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp_app_format", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "C:/Users/JJ/esp/esp-idf/components/bootloader", "C:/Users/JJ/esp/esp-idf/components/bootloader_support", "C:/Users/JJ/esp/esp-idf/components/efuse", "C:/Users/JJ/esp/esp-idf/components/esp_app_format", "C:/Users/JJ/esp/esp-idf/components/esp_common", "C:/Users/JJ/esp/esp-idf/components/esp_hw_support", "C:/Users/JJ/esp/esp-idf/components/esp_rom", "C:/Users/JJ/esp/esp-idf/components/esp_system", "C:/Users/JJ/esp/esp-idf/components/esptool_py", "C:/Users/JJ/esp/esp-idf/components/freertos", "C:/Users/JJ/esp/esp-idf/components/hal", "C:/Users/JJ/esp/esp-idf/components/log", "C:/Users/JJ/esp/esp-idf/components/bootloader/subproject/main", "C:/Users/JJ/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "C:/Users/JJ/esp/esp-idf/components/newlib", "C:/Users/JJ/esp/esp-idf/components/partition_table", "C:/Users/JJ/esp/esp-idf/components/soc", "C:/Users/JJ/esp/esp-idf/components/spi_flash", "C:/Users/JJ/esp/esp-idf/components/xtensa", "" ],
+    "debug_prefix_map_gdbinit": ""
+}
