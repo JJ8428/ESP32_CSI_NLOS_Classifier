@@ -29,14 +29,6 @@ The repository includes a Neural Network (NN) binary classifier that employs dee
 
 Explore a real-time application of the NN classifier, demonstrating its functionality in practical scenarios.
 
-## Results
-
-The results of the classifiers, including accuracy, precision, recall, and other relevant metrics, can be found [here](insert-link-here).
-
-## Plots
-
-Discover a collection of plots illustrating the effectiveness of each feature in distinguishing between LOS and NLOS scenarios.
-
 ## Data Collection
 
 The CSI data is collected using the EspressIf CSI script, available [here](https://github.com/espressif/esp-csi/tree/master/examples/get-started).
