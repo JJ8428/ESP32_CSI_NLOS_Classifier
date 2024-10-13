@@ -1,42 +1,62 @@
-# ESP32 NLOS Classifier
+# 🚀 ESP32 NLOS Classifier for Indoor Localization
 
-## Overview
+Indoor localization continues to gain traction as smart home applications and resource management technologies grow. A common approach is to use **WiFi Fine Timing Measurement (FTM)** for indoor localization through multiple access points. However, **WiFi FTM-based localization** often suffers from multipath-induced signal distortions, significantly degrading performance, especially in environments with obstructions.
 
-ESP32 NLOS Classifier is a binary classifier designed to analyze WiFi Channel State Information (CSI) data in the time, fast time, and frequency domains. The primary objective is to extract features that effectively distinguish between Line-of-Sight (LOS) and Non-Line-of-Sight (NLOS) scenarios. This project incorporates adapted features from previous NLOS CSI classifiers, experiments with features used for Ultra-Wideband (UWB), and introduces new features inspired by intuition gained during research.
+**This project introduces a robust Line-of-Sight (LOS) detector** that leverages WiFi Channel State Information (CSI) and Channel Impulse Response (CIR) data to determine whether a user has a clear LOS to an access point. 🌐
 
-## Features
+---
 
-- Analysis of WiFi CSI data in time, fast time, and frequency domains.
-- Adaptation of features from previous NLOS CSI classifiers.
-- Experimentation with features used for UWB.
-- Introduction of new features developed from research intuition.
+## 🔍 Motivation
 
-## Dataset
+WiFi FTM localization works well when there are no obstructions between users and access points. However, **multipath signal distortions** can degrade accuracy in complex environments. To address this, it's crucial to determine the LOS condition for each access point, which is where the need for a robust **LOS/NLOS (Non-Line-of-Sight) classifier** comes in. 🎯
 
-The repository includes a comprehensive CSI dataset featuring numerous examples of both LOS and NLOS cases. This dataset serves as the foundation for training and evaluating the ESP32 NLOS Classifier.
+---
 
-## Classifiers
+## 📊 Dataset Overview
 
-### Support Vector Machine (SVM) Binary Classifier
+The repository contains a **comprehensive CSI dataset** with examples of both LOS and NLOS cases. This dataset serves as the foundation for training and evaluating the ESP32 NLOS Classifier.
 
-An implementation of an SVM binary classifier is provided, leveraging the extracted features to distinguish between LOS and NLOS scenarios.
+### Key Features:
+- 📡 WiFi CSI and CIR data
+- 🏷️ Labeled LOS and NLOS examples
 
-### Neural Network (NN) Binary Classifier
+---
 
-The repository includes a Neural Network (NN) binary classifier that employs deep learning techniques for analyzing CSI data and making predictions regarding NLOS classification.
+## 🤖 Model Overview
 
-## Real-Time Application
+Two models are used to classify whether the connection between a user and a router is LOS or NLOS based on WiFi CSI and CIR data:
 
-Explore a real-time application of the NN classifier, demonstrating its functionality in practical scenarios.
+1. **Support Vector Machine (SVM)**  
+   - 📈 Accuracy: 79%
 
-## Data Collection
+2. **Neural Network**  
+   - 💯 Accuracy: 86%
 
-The CSI data is collected using the EspressIf CSI script, available [here](https://github.com/espressif/esp-csi/tree/master/examples/get-started).
+For more detailed information on model performance and dataset features, check out the [project report](https://docs.google.com/document/d/1cXvi47HVLpnSG2Ms7i4oNRthOpzG6jbhIWm3wank2Gg/edit?tab=t.0). 📄
 
-## Espressif IDF
+---
 
-Ensure you have the Espressif IoT Development Framework (IDF) installed before using this repository. You can find installation instructions for IDF [here](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/).
+## 🛠️ Usage
 
-## Research Paper
+The project folders `NLOS_classification` and `board_program/ftm_ESP` contain the necessary scripts to run the classification.
 
-For a detailed paper on the research behind this repository, please refer to the following [Google Document](https://docs.google.com/document/d/1cXvi47HVLpnSG2Ms7i4oNRthOpzG6jbhIWm3wank2Gg/edit?usp=sharing).
+### Steps to run the project:
+1. Set up two EspressIf boards with proper WiFi antennas.
+2. Upload the **FTM Initiator** and **FTM Responder** code using the EspressIf IDE.
+3. To perform real-time classification, run `realtime_NLOS_clf.py` on a computer or laptop connected to the board with the FTM initiator code.
+
+### ⚠️ Things to be aware of:
+- **Potential Issue**: The real-time classifier currently runs on a single thread. Ideally, two threads should be implemented: 
+  - One thread should handle reading and updating the CSI/CIR data.
+  - The other should handle classification using the model.
+  
+  With one thread, WiFi CSI data frames can be missed during inference, causing potential data hiccups. This is an improvement that can be easily addressed. 🔄
+
+---
+
+## 🌱 Future Extensions
+
+Future improvements to the project could include:
+- Recording a dataset with distance...
+- Going back and adding more comments...
+- Developing a **second classifier** to predict the **distance** between two WiFi routers based on WiFi CSI data. 📏📶
